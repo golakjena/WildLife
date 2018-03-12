@@ -1,0 +1,157 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0;}
+body, html { height:100%; width:100%;}
+form { height:100%; }
+body{ background:#f2f5f7; font-family:'ralewayregular', Arial; font-size:14px;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block;}
+img { max-width: 100%; height: auto; border:0; width: auto\9; /* ie8 */}
+a{ text-decoration:none; outline:0; border:0;}
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0;}
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+.clr{ clear:both;}
+.push { height:115px;}
+ul, li{ list-style-type:none; margin: 0;}
+h1, h2, h3, h4, h5, h6{ font-weight:normal; margin: 0; padding: 0;}
+table{ border-collapse:collapse;}
+.fLeft{ float:left;}
+.fRight{ float:right;}
+.alignRight{ text-align:right;}
+.alignLeft{ text-align:left;}
+.alignCenter{ text-align:center;}
+.positionRelative{ position:relative;}
+*{ box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; -ms-box-sizing:border-box;}
+
+/********* Font Face ****************/
+@font-face {
+    font-family: 'ralewaybold';
+    src: url('../fonts/raleway-bold-webfont.eot');
+    src: url('../fonts/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-bold-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-bold-webfont.woff') format('woff'),
+         url('../fonts/raleway-bold-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-bold-webfont.svg#ralewaybold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ralewayextrabold';
+    src: url('../fonts/raleway-extrabold-webfont.eot');
+    src: url('../fonts/raleway-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-extrabold-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-extrabold-webfont.woff') format('woff'),
+         url('../fonts/raleway-extrabold-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-extrabold-webfont.svg#ralewayextrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ralewayblack';
+    src: url('../fonts/raleway-black-webfont.eot');
+    src: url('../fonts/raleway-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-black-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-black-webfont.woff') format('woff'),
+         url('../fonts/raleway-black-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-black-webfont.svg#ralewayblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ralewaylight';
+    src: url('../fonts/raleway-light-webfont.eot');
+    src: url('../fonts/raleway-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-light-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-light-webfont.woff') format('woff'),
+         url('../fonts/raleway-light-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-light-webfont.svg#ralewaylight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('../fonts/raleway-regular-webfont.eot');
+    src: url('../fonts/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-regular-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-regular-webfont.woff') format('woff'),
+         url('../fonts/raleway-regular-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-regular-webfont.svg#ralewayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/***
+Main CSS Rules
+***********/
+.wrapper{ max-width: 1200px; margin: 0 auto;}
+.header{ width: 100%; background: rgba(45,27,16,0.6); position: fixed; left: 0; top: 0; z-index: 999999; padding: 30px 0 40px 0; transition:all 0.3s linear; -moz-transition:all 0.3s linear; -webkit-transition:all 0.3s linear; -ms-transition:all 0.3s linear;}
+.header.fixHeader{ background: rgba(45,27,16,0.95); padding: 15px 0}
+.header .wrapper{ position: relative;}
+.logo{ width: 257px; float: left; transition:width 0.3s linear; -moz-transition:width 0.3s linear; -webkit-transition:width 0.3s linear; -ms-transition:width 0.3s linear;}
+.header.fixHeader .logo{ width: 170px;}
+
+.topNav{ width: auto; position: absolute; right: 0; bottom: 0; z-index: 999999;}
+.topNav ul li{ display: inline-block; font-family: 'ralewaybold', Arial; font-size: 18px; margin: 0 0 0 30px;}
+.topNav ul li a{ display: block; color: #fff;}
+
+.header.fixHeader .topNav{ bottom: 10px;}
+
+.btnMobileNav{ display: inline-block; position: absolute; right: 0; top: -10px; z-index: 999; display: none;}
+
+.homeSection{ background: url(../images/headerBg.jpg) top center no-repeat; background-size: cover; padding: 0 0 100px 0;}
+.homeInner{ max-width: 1050px; margin: 0 auto; text-align: center; padding: 300px 0 0 0;}
+.homeInner h2{ font-family: 'ralewaybold', Arial; font-size: 37px; line-height: 50px; letter-spacing: -1px; color: #fff; margin: 0 0 20px 0;}
+.homeInner h3{ font-family: 'ralewayregular', Arial; font-size: 28px; line-height: 38px; letter-spacing: -1px; color: #d1d1d2; margin: 0 0 80px 0;}
+.btnDonateNow{ display: inline-block; background: #68ba3f; font-family: 'ralewayextrabold', Arial; font-size: 22px; padding: 23px 50px; color: #fff; text-transform: uppercase; letter-spacing: 5px; border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; -ms-border-radius: 6px; transition:background 0.3s linear; -moz-transition:background 0.3s linear; -webkit-transition:background 0.3s linear; -ms-transition:background 0.3s linear;}
+.btnDonateNow:hover{ background: #54a12d;}
+
+
+.section{ padding: 80px 0;}
+.heading2{ font-family: 'ralewaylight', Arial; font-size: 56px; line-height: 58px; color: #fff; margin: 0 0 50px 0; text-align: center;}
+.aboutSection{ background: url(../images/aboutBg.jpg) top center no-repeat; background-size: cover; text-align: center;}
+.aboutSection p{ font-size: 18px; line-height: 26px; color: #fff; padding: 0 0 30px 0;}
+.aboutSection h3{ font-family: 'ralewaybold', Arial; font-size: 22px; color: #fff; padding: 0 0 5px 0;}
+.aboutSection h4{ font-size: 18px; color: #fff;}
+
+.whoWeAre{ background: url(../images/whoweareBg.jpg) top center no-repeat; background-size: cover; text-align: center;}
+.whoWeAre h3{ font-size: 27px; line-height: 42px; color: #fff;}
+.whoWeOuter{ margin: 50px 0 0 0; background: url(../images/separator.png) top center repeat-y;}
+.whoWe{ width: 50%; vertical-align: top; font-size: 0; padding: 0 40px; float: left;}
+.whoWe h4{ font-family: 'ralewayblack', Arial; font-size: 23px; line-height: 26px; color: #fff; padding: 0 0 30px 0;}
+.whoWe p{ font-size: 18px; line-height: 26px; color: #fff;}
+
+.ourPartners{ background: url(../images/partnerBg.jpg) top center no-repeat; background-size: cover; text-align: center;}
+.partnerLogo{ padding: 10px 0 20px 0;}
+.ourPartners h3{ font-size: 28px; line-height: 40px; color: #fff;}
+
+.ourWork{ background: url(../images/ourWorkBg.jpg) top center no-repeat; background-size: cover; text-align: center;}
+.worklistCont{ margin: 100px 0 0 0; background: url(../images/separator.png) top center repeat-y;}
+.workList{ width: 50%; vertical-align: top; font-size: 0; padding: 0 40px; float: left;}
+.thumb{ padding: 0 0 20px 0;}
+.workList h4{ font-family: 'ralewayblack', Arial; font-size: 23px; line-height: 26px; color: #fff; padding: 0 0 30px 0;}
+.workList p{ font-size: 18px; line-height: 26px; color: #fff;}
+
+.getInTouch{ background: #e8ecee; text-align: center;}
+.getInTouch .heading2{ color: #273137;}
+.getInTouch h3{ font-size: 28px; line-height: 40px; color: #324149; padding: 0 35px;}
+.getInTouch h3 a{ color: #68ba3f;}
+
+
+.footer{ background: #f1f4f5; padding: 45px 0;}
+.bottomNav{ text-align: center;}
+.bottomNav ul li{ display: inline-block; font-family: 'ralewaybold', Arial; font-size: 18px; color: #a3a9ac; margin: 0 20px;}
+.bottomNav ul li a{ display: block; color: #a3a9ac; transition:color 0.3s linear; -moz-transition:color 0.3s linear; -webkit-transition:color 0.3s linear; -ms-transition:color 0.3s linear;}
+.bottomNav ul li a:hover{ color: #324149;}
+.copyright{ padding: 50px 0 0 0;}
+.copyright p{ float: left; font-size: 14px; color: #585c60; margin: 10px 0 0 0;}
+.socialList{ width: auto; float: right;}
+.socialList li{ display: inline-block; vertical-align: top; margin: 0 0 0 10px;}
+.socialList li a{ display: block; opacity: 0.6; transition:opacity 0.3s linear; -moz-transition:opacity 0.3s linear; -webkit-transition:opacity 0.3s linear; -ms-transition:opacity 0.3s linear;}
+.socialList li a:hover{ opacity: 1;}
+.socialList li a img{ border: 0; outline: 0;}
+
+
+
+
